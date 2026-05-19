@@ -1,4 +1,5 @@
 import "../styles/form.css";
+import { useNavigate } from "react-router-dom";
 
 import {
   MapPin,
@@ -9,6 +10,9 @@ import {
 } from "lucide-react";
 
 function Form() {
+
+  const navigate = useNavigate();
+
   return (
     <div className="form-page">
 
@@ -101,9 +105,12 @@ function Form() {
         </div>
 
         {/* Button */}
-        <button className="generate-btn">
-          Generate Itinerary
-          <Sparkles size={20} />
+        <button
+        className="generate-btn"
+        onClick={() => navigate("/itinerary")}
+        >
+        Generate Itinerary
+        <Sparkles size={20} />
         </button>
 
       </div>
