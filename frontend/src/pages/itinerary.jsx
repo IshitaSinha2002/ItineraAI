@@ -6,7 +6,13 @@ import {
   Gem
 } from "lucide-react";
 
+import { useLocation } from "react-router-dom";
+
 function Itinerary() {
+
+  const location = useLocation();
+
+  const data = location.state;
 
   return (
     <div className="itinerary-page">
@@ -26,7 +32,8 @@ function Itinerary() {
         <div className="hero-content simple-hero">
 
           <div>
-            <h2>Kyoto, Japan</h2>
+            <h2>{data.destination}</h2>
+
             <p>
               Curated AI Itinerary for a Sophisticated Escape
             </p>
@@ -41,21 +48,33 @@ function Itinerary() {
       <section className="info-cards">
 
         <div className="info-card">
+
           <CalendarDays size={24} />
+
           <span>DURATION</span>
-          <h3>7 Days</h3>
+
+          <h3>{data.days} Days</h3>
+
         </div>
 
         <div className="info-card">
+
           <Wallet size={24} />
+
           <span>BUDGET</span>
-          <h3>$3,000</h3>
+
+          <h3>${data.budget}</h3>
+
         </div>
 
         <div className="info-card">
+
           <Gem size={24} />
+
           <span>STYLE</span>
-          <h3>Luxury & Comfort</h3>
+
+          <h3>{data.style}</h3>
+
         </div>
 
       </section>
@@ -65,8 +84,11 @@ function Itinerary() {
       <section className="daily-section">
 
         <div className="section-title">
+
           <div className="line"></div>
+
           <h2>Daily Breakdown</h2>
+
         </div>
 
         <div className="days-grid">
@@ -93,9 +115,10 @@ function Itinerary() {
               <span>09:00 AM</span>
 
               <div>
-                <h4>Arrival at Kansai Airport</h4>
+                <h4>Arrival at Destination</h4>
+
                 <p>
-                  Private luxury transfer to The Ritz-Carlton, Kyoto.
+                  Check in and explore nearby attractions.
                 </p>
               </div>
 
@@ -106,22 +129,10 @@ function Itinerary() {
               <span>01:00 PM</span>
 
               <div>
-                <h4>Tea Ceremony in Gion</h4>
+                <h4>Local Experience</h4>
+
                 <p>
-                  Private tea master session in a 17th-century tea house.
-                </p>
-              </div>
-
-            </div>
-
-            <div className="activity">
-
-              <span>07:00 PM</span>
-
-              <div>
-                <h4>Kaiseki Dinner</h4>
-                <p>
-                  Multi-course traditional meal at Kikuno i Honten.
+                  Explore famous places and local cuisine.
                 </p>
               </div>
 
@@ -137,10 +148,10 @@ function Itinerary() {
 
               <div>
                 <h3>Day 2</h3>
-                <p>Spiritual Path</p>
+                <p>Adventure & Exploration</p>
               </div>
 
-              <span className="tag">Temple Tour</span>
+              <span className="tag">Adventure</span>
 
             </div>
 
@@ -148,12 +159,13 @@ function Itinerary() {
 
             <div className="activity">
 
-              <span>08:30 AM</span>
+              <span>08:00 AM</span>
 
               <div>
-                <h4>Fushimi Inari Shrine</h4>
+                <h4>Outdoor Activities</h4>
+
                 <p>
-                  Early morning hike through thousands of torii gates.
+                  Enjoy sightseeing and adventure experiences.
                 </p>
               </div>
 
@@ -161,25 +173,13 @@ function Itinerary() {
 
             <div className="activity">
 
-              <span>12:30 PM</span>
+              <span>03:00 PM</span>
 
               <div>
-                <h4>Shojin Ryori Lunch</h4>
+                <h4>City Exploration</h4>
+
                 <p>
-                  Traditional Zen Buddhist vegetarian cuisine.
-                </p>
-              </div>
-
-            </div>
-
-            <div className="activity">
-
-              <span>03:30 PM</span>
-
-              <div>
-                <h4>Arashiyama Bamboo Grove</h4>
-                <p>
-                  Rickshaw tour through ethereal bamboo paths.
+                  Visit iconic landmarks and hidden gems.
                 </p>
               </div>
 
@@ -195,10 +195,10 @@ function Itinerary() {
 
               <div>
                 <h3>Day 3</h3>
-                <p>Art & Zen</p>
+                <p>Relaxation</p>
               </div>
 
-              <span className="tag">Mindfulness</span>
+              <span className="tag">Leisure</span>
 
             </div>
 
@@ -209,22 +209,10 @@ function Itinerary() {
               <span>10:00 AM</span>
 
               <div>
-                <h4>Ryoan-ji Rock Garden</h4>
+                <h4>Relax & Enjoy</h4>
+
                 <p>
-                  Contemplation at Japan's most famous dry landscape garden.
-                </p>
-              </div>
-
-            </div>
-
-            <div className="activity">
-
-              <span>02:00 PM</span>
-
-              <div>
-                <h4>Kinkaku-ji Pavilion</h4>
-                <p>
-                  Photography and Zen temple reflections.
+                  Spend the day relaxing and shopping.
                 </p>
               </div>
 
@@ -235,9 +223,10 @@ function Itinerary() {
               <span>06:00 PM</span>
 
               <div>
-                <h4>Pontocho Alley Dinner</h4>
+                <h4>Farewell Dinner</h4>
+
                 <p>
-                  Riverside dining with modern Kyoto-style cuisine.
+                  End your journey with a memorable dinner.
                 </p>
               </div>
 
