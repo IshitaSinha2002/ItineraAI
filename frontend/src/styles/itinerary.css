@@ -1,0 +1,235 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.itinerary-page {
+  height: 100vh;
+  background: #f3f4f6;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* ── Navbar ── */
+.navbar {
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: 48px;
+  flex-shrink: 0;
+}
+
+.logo {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111;
+  letter-spacing: -0.3px;
+}
+
+/* ── Hero ── */
+.hero-section-itinerary {
+  background: #1a3a38;
+  flex-shrink: 0;
+  padding: 2rem 2rem 1.75rem;
+}
+
+.simple-hero {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.hero-section-itinerary h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+
+.hero-section-itinerary p {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* ── Info Cards ── */
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 0.75rem 2rem;
+  flex-shrink: 0;
+}
+
+.info-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 0.6rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.info-card svg {
+  width: 18px;
+  height: 18px;
+  color: #555;
+  margin-bottom: 2px;
+}
+
+.info-card span {
+  font-size: 10px;
+  color: #999;
+  letter-spacing: 0.6px;
+  font-weight: 500;
+}
+
+.info-card h3 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #111;
+}
+
+/* ── Daily Breakdown ── */
+.daily-section {
+  flex: 1;
+  overflow: hidden;
+  padding: 0 2rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  position: relative;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 0.6rem;
+  flex-shrink: 0;
+}
+
+.line {
+  width: 4px;
+  height: 22px;
+  background: #1a3a38;
+  border-radius: 2px;
+}
+
+.section-title h2 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #111;
+}
+
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  flex: 1;
+  min-height: 0;
+}
+
+.day-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow: hidden;
+}
+
+.day-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.day-header h3 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #111;
+}
+
+.day-header p {
+  font-size: 11px;
+  color: #888;
+}
+
+.tag {
+  background: #e0f5ef;
+  color: #0a6e4f;
+  font-size: 10px;
+  font-weight: 500;
+  padding: 3px 8px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.divider {
+  height: 1px;
+  background: #e5e7eb;
+  flex-shrink: 0;
+}
+
+.activity {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 6px;
+  align-items: start;
+}
+
+.activity span {
+  font-size: 10px;
+  color: #888;
+  font-weight: 500;
+  padding-top: 1px;
+}
+
+.activity h4 {
+  font-size: 12px;
+  font-weight: 500;
+  color: #111;
+  margin-bottom: 1px;
+}
+
+.activity p {
+  font-size: 11px;
+  color: #888;
+  line-height: 1.4;
+}
+
+/* ── Footer ── */
+.footer {
+  background: #fff;
+  border-top: 1px solid #e5e7eb;
+  padding: 0.6rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.footer p {
+  font-size: 11px;
+  color: #aaa;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-links a {
+  font-size: 11px;
+  color: #888;
+  text-decoration: none;
+}
